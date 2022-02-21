@@ -1990,11 +1990,11 @@ const app = new Vue({
                                                 large: true,
                                                 effect: {
                                                     show: true,
-                                                    constantSpeed: 25,
+                                                    constantSpeed: 15,
                                                     trailLength: 0.05,
                                                     color: '#64f2ff',
                                                     symbol: history_symbol,//ECharts 提供的标记类型包括 'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow'
-                                                    symbolSize: 15,
+                                                    symbolSize: 12,
 
 
                                                 },
@@ -2023,7 +2023,7 @@ const app = new Vue({
                                                 large: true,
                                                 effect: {
                                                     show: true,
-                                                    constantSpeed: 30,
+                                                    constantSpeed: 20,
                                                     trailLength: 0.1,
                                                     color: '#64f2ff',
                                                     symbol: now_symbol,//ECharts 提供的标记类型包括 'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow'
@@ -2898,7 +2898,7 @@ const app = new Vue({
                             min: 0,
                             max: 60,
                             inRange: {
-                                symbolSize: [1.0, 2],
+                                symbolSize: [0.5, 0.5],
                             },
                         },
                         globe: {
@@ -2923,8 +2923,8 @@ const app = new Vue({
                                 symbolSize: 0.1,
                                 silent: true,
                                 itemStyle: {
-                                    color: '#424242',
-                                    opacity: 1,
+                                    color: '#00e5ff',
+                                    opacity: 0.3,
                                 },
                                 data: jsonData,
                             },
