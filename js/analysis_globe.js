@@ -1289,7 +1289,6 @@ $.get('https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/json/analysis_all.j
                     var value2 = alasql("column of select [2] from ? ", [data])
                     var value3 = alasql("column of select [3] from ? ", [data])
                     var avg_shangji_value = alasql("column of select [5] from ? ", [data])
-                    console.log((avg_shangji_value[5] * 100).toFixed(2))
                     var value = [value1, value2, value3]
                     var series_data = []
                     for (i = 0; i < value.length; i++) {
