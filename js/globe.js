@@ -12,19 +12,11 @@ const app = new Vue({
     methods: {
         drawTab1Chart() {
             const mychart = echarts.init(document.getElementById('chart1'))
-            mychart.showLoading({
-                text: 'loading',
-                color: '#c23531',
-                textColor: '#fff',
-                maskColor: 'rgba(0, 0, 0, 1)',
-                zlevel: 0,
-            });
 
             $.get('https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/json/world_geo.json', function (jsonData) {
 
                 $.getJSON('https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/json/population.json', function (population_data) {
 
-                    mychart.hideLoading();
 
                     mychart.setOption(getOption())
 
