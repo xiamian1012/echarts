@@ -2011,7 +2011,7 @@ $.get('https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/json/population.jso
                 min: 0,
                 max: 60,
                 inRange: {
-                    symbolSize: [0.5, 0.5],
+                    symbolSize: [1, 1],
                 },
             },
             globe: {
