@@ -1896,43 +1896,46 @@ const app = new Vue({
                                                     show: true,
                                                     backgroundColor: 'rgba(41,52,72)',
                                                     formatter: function (params) {
-                                                        var htmlItem1 = ''
-                                                        var htmlItem2 = ''
-                                                        var htmlItem3 = ''
-                                                        var htmlItem4 = ''
-                                                        htmlItem1 += '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px;color:#000;">'
-                                                        htmlItem1 += '<span style="font-size: 24px;font-weight: bold;font-family:Microsoft YaHei;color:#18ffff;">' + params.data.extend_data[0] + '</span>:' + '<span style="font-size: 14px;font-weight: bold;font-family:Microsoft YaHei;color:#ffffff;">' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[11] + '</span>:' + '<br>'
+                                                        if (typeof (params.data) == "undefined") {
+                                                            return '';
+                                                        }
+                                                        else {
+                                                            var htmlItem1 = ''
+                                                            var htmlItem2 = ''
+                                                            var htmlItem3 = ''
+                                                            var htmlItem4 = ''
+                                                            htmlItem1 += '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px;color:#000;">'
+                                                            htmlItem1 += '<span style="font-size: 24px;font-weight: bold;font-family:Microsoft YaHei;color:#18ffff;">' + params.data.extend_data[0] + '</span>:' + '<span style="font-size: 14px;font-weight: bold;font-family:Microsoft YaHei;color:#ffffff;">' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[11] + '</span>:' + '<br>'
 
-                                                        htmlItem1 += '</div>'
+                                                            htmlItem1 += '</div>'
 
-                                                        htmlItem2 += '<table>'
-                                                            + '<tr>'
-                                                            + '<td text-align:center">' + '<div style="border-bottom: 5px solid rgba(255,39,40,.3); font-size: 14px;font-weight: bold;font-family:Microsoft YaHei;padding-bottom: 7px;margin-bottom: 7px;color:rgba(255,39,40,.7);width:80px;">'
-                                                            + '奖牌数量' + '<br>'
-                                                            + '</div>'
-                                                        htmlItem2 += '<span style="font-size: 12px;color:#FFFFFF">' + '金牌:' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[2] + '</span>' + '<br>'
-                                                        htmlItem2 += '<span style="font-size: 12px;color:#FFFFFF">' + '银牌:' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[3] + '</span>' + '<br>'
-                                                        htmlItem2 += '<span style="font-size: 12px;color:#FFFFFF">' + '铜牌:' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[4] + '</span>' + '<br>'
-                                                        htmlItem2 += '</td>'
+                                                            htmlItem2 += '<table>'
+                                                                + '<tr>'
+                                                                + '<td text-align:center">' + '<div style="border-bottom: 5px solid rgba(255,39,40,.3); font-size: 14px;font-weight: bold;font-family:Microsoft YaHei;padding-bottom: 7px;margin-bottom: 7px;color:rgba(255,39,40,.7);width:80px;">'
+                                                                + '奖牌数量' + '<br>'
+                                                                + '</div>'
+                                                            htmlItem2 += '<span style="font-size: 12px;color:#FFFFFF">' + '金牌:' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[2] + '</span>' + '<br>'
+                                                            htmlItem2 += '<span style="font-size: 12px;color:#FFFFFF">' + '银牌:' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[3] + '</span>' + '<br>'
+                                                            htmlItem2 += '<span style="font-size: 12px;color:#FFFFFF">' + '铜牌:' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[4] + '</span>' + '<br>'
+                                                            htmlItem2 += '</td>'
 
-                                                        htmlItem3 += '<td>' + '<div style="border-bottom: 5px solid rgba(79,196,21,.3); font-size: 14px;font-weight: bold;font-family:Microsoft YaHei;padding-bottom: 7px;margin-bottom: 7px;color:rgba(79,196,21,.7);width:80px;">'
-                                                            + '运动员数' + '<br>'
-                                                            + '</div>'
-                                                        htmlItem3 += '<span style="font-size: 12px;color:#FFFFFF">' + '总数:' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[5] + '</span>' + '<br>'
-                                                        htmlItem3 += '<span style="font-size: 12px;color:#FFFFFF">' + '女性:' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[6] + '</span>' + '<br>'
-                                                        htmlItem3 += '<span style="font-size: 12px;color:#FFFFFF">' + '男性:' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[7] + '</span>' + '<br>'
-                                                        htmlItem3 += '</td>'
+                                                            htmlItem3 += '<td>' + '<div style="border-bottom: 5px solid rgba(79,196,21,.3); font-size: 14px;font-weight: bold;font-family:Microsoft YaHei;padding-bottom: 7px;margin-bottom: 7px;color:rgba(79,196,21,.7);width:80px;">'
+                                                                + '运动员数' + '<br>'
+                                                                + '</div>'
+                                                            htmlItem3 += '<span style="font-size: 12px;color:#FFFFFF">' + '总数:' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[5] + '</span>' + '<br>'
+                                                            htmlItem3 += '<span style="font-size: 12px;color:#FFFFFF">' + '女性:' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[6] + '</span>' + '<br>'
+                                                            htmlItem3 += '<span style="font-size: 12px;color:#FFFFFF">' + '男性:' + '&nbsp&nbsp&nbsp&nbsp' + params.data.extend_data[7] + '</span>' + '<br>'
+                                                            htmlItem3 += '</td>'
 
-                                                        htmlItem4 += '<td>' + '<div style="border-bottom: 5px solid rgba(255,140,21,.3); font-size: 14px;font-weight: bold;font-family:Microsoft YaHei;padding-bottom: 7px;margin-bottom: 7px;color:rgba(255,140,21,.7);width:80px;">'
-                                                            + '平均数据' + '<br>'
-                                                            + '</div>'
-                                                        htmlItem4 += '<span style="font-size: 12px;color:#FFFFFF">' + '平均身高:' + '&nbsp' + params.data.extend_data[8].toFixed(1) + '</span>' + '<br>'
-                                                        htmlItem4 += '<span style="font-size: 12px;color:#FFFFFF">' + '平均体重:' + '&nbsp' + params.data.extend_data[9].toFixed(1) + '</span>' + '<br>'
-                                                        htmlItem4 += '<span style="font-size: 12px;color:#FFFFFF">' + '平均年龄:' + '&nbsp' + params.data.extend_data[10].toFixed(1) + '</span>' + '<br>'
-                                                        htmlItem4 += '</td>' + '</tr>' + '</table>'
-
-
-                                                        return htmlItem1 + htmlItem2 + htmlItem3 + htmlItem4;
+                                                            htmlItem4 += '<td>' + '<div style="border-bottom: 5px solid rgba(255,140,21,.3); font-size: 14px;font-weight: bold;font-family:Microsoft YaHei;padding-bottom: 7px;margin-bottom: 7px;color:rgba(255,140,21,.7);width:80px;">'
+                                                                + '平均数据' + '<br>'
+                                                                + '</div>'
+                                                            htmlItem4 += '<span style="font-size: 12px;color:#FFFFFF">' + '平均身高:' + '&nbsp' + params.data.extend_data[8].toFixed(1) + '</span>' + '<br>'
+                                                            htmlItem4 += '<span style="font-size: 12px;color:#FFFFFF">' + '平均体重:' + '&nbsp' + params.data.extend_data[9].toFixed(1) + '</span>' + '<br>'
+                                                            htmlItem4 += '<span style="font-size: 12px;color:#FFFFFF">' + '平均年龄:' + '&nbsp' + params.data.extend_data[10].toFixed(1) + '</span>' + '<br>'
+                                                            htmlItem4 += '</td>' + '</tr>' + '</table>'
+                                                            return htmlItem1 + htmlItem2 + htmlItem3 + htmlItem4;
+                                                        }
                                                     }
                                                 },
                                                 showLegendSymbol: false,
