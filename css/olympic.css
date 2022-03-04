@@ -1,0 +1,86 @@
+html,
+body {
+    height:100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    transform-origin:0px 0px 0px;
+    box-sizing: border-box;
+   
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+#chart1 {
+top:20px;
+left:10px;
+width: 1900px;
+height:894px;
+z-index: 2;
+
+}
+
+#chart2{
+position: absolute;
+top:58px;
+left:745px;
+width: 442px;
+height:163px;
+z-index: 3;
+}
+
+#chart3 {
+position: absolute;
+top:338px;
+left:600px;
+width: 736px;
+height:528px;
+z-index: 2;
+}
+
+#chart1:after {
+    content: ' ';
+    display: block;
+    background-image: linear-gradient(44deg, rgba(255, 255, 255, 0) 50%, #09C2C0 100%);
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 65px;
+    left: calc(200%/9 + 41px);
+    ;
+    animation: radar-beam 4s infinite;
+    animation-timing-function: linear;
+    transform-origin: bottom right;
+    border-radius: 100% 0 0 0;
+}
+
+@keyframes radar-beam {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    z-index: 1;
+}
+
+#video {
+    position: absolute;
+    width: 240px;
+    height: 200px;
+    top: 65px;
+    left: 1285px;
+    z-index: 2;
+}
+
