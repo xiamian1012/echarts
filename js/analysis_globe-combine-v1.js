@@ -624,7 +624,7 @@ $.get('https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/json/analysis_all.j
                                 axisLabel: {
                                     color: '#6c8acc',
                                     show: true, formatter: function (value) {
-                                        return switchUnit_new(value)
+                                        return (value*100).toFixed(1)+'%'
                                     }
                                 },
 
@@ -639,7 +639,7 @@ $.get('https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/json/analysis_all.j
                                 axisLabel: {
                                     color: '#6c8acc',
                                     show: true, formatter: function (value) {
-                                        return switchUnit_new(value)
+                                        return (value*100).toFixed(1)+'%'
                                     }
                                 },
 
